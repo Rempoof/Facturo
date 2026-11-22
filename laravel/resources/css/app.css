@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: 'IBM Plex Sans Arabic', 'Inter', sans-serif;
+
+  --color-ink: #14171f;
+  --color-electric: #2457f5;
+  --color-electric-hover: #1b45c9;
+  --color-deep-green: #0f3d3a;
+  --color-mint: #bff0d4;
+  --color-app-bg: #f3f4f6;
+  --color-frame: #e4e6ea;
+  --color-hairline: #e3e6ec;
+  --color-muted: #667085;
+  --color-secondary: #525866;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html { font-family: var(--font-sans); }
+
+[dir='rtl'], .font-arabic { font-family: var(--font-arabic); }
+
+.tabular { font-variant-numeric: tabular-nums; }
+
+:focus-visible {
+  outline: 2px solid var(--color-electric);
+  outline-offset: 2px;
+}
+
+/* Mode sombre — same scope as the approved prototype */
+.dark {
+  color-scheme: dark;
+  background-color: #0b0f14;
+  color: #e9edf5;
+}
+.dark .surface { background-color: #121821 !important; border-color: #25303e !important; }
+.dark .surface-soft { background-color: #161e28 !important; }
+.dark .surface-raised { background-color: #1d2733 !important; }
+.dark .text-ink { color: #e9edf5 !important; }
+.dark .text-secondary { color: #a9b4c5 !important; }
+.dark .text-muted { color: #94a1b3 !important; }
+.dark .border-hairline { border-color: #25303e !important; }
+
+/* A4 paper must never be tinted by the app theme */
+.paper-light, .paper-light .surface { background-color: #ffffff !important; color: #14171f !important; }
+.paper-light .text-ink { color: #14171f !important; }
+.paper-light .text-muted, .paper-light .text-secondary { color: #667085 !important; }

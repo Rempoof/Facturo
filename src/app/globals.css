@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #14171f;
+  --electric-blue: #2457f5;
+  --electric-blue-hover: #1b45c9;
+  --deep-green: #0f3d3a;
+  --mint: #bff0d4;
+  --app-bg: #f3f4f6;
+  --outer-frame: #e4e6ea;
+  --card-border: #e3e6ec;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #14171f;
+  background-color: #f7f8fa;
+}
+
+.font-arabic,
+[dir="rtl"] {
+  font-family: "IBM Plex Sans Arabic", "Inter", sans-serif;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 2px solid #2457f5;
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cfd4dc;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #aeb6c3;
+}
+
+/* ==========================================================================
+   DARK THEME (Mode sombre) — scoped overrides for the Facturo shell
+   ========================================================================== */
+.facturo-dark {
+  background-color: #0b0f14 !important;
+  color: #e8ecf4;
+}
+
+.facturo-dark .bg-white,
+.facturo-dark [class*="bg-[#FFFFFF]"] {
+  background-color: #121821 !important;
+}
+.facturo-dark [class*="bg-[#F8F9FB]"] {
+  background-color: #161e28 !important;
+}
+.facturo-dark [class*="bg-[#F3F4F6]"] {
+  background-color: #0e141c !important;
+}
+.facturo-dark [class*="bg-[#E4E6EA]"],
+.facturo-dark [class*="bg-[#E9ECEF]"] {
+  background-color: #0b0f14 !important;
+}
+.facturo-dark [class*="bg-[#E8EAEE]"],
+.facturo-dark [class*="bg-[#F0F2F5]"] {
+  background-color: #1d2733 !important;
+}
+.facturo-dark [class*="bg-[#EEF3FF]"],
+.facturo-dark [class*="bg-[#E4EBFF]"] {
+  background-color: #17233a !important;
+}
+.facturo-dark [class*="bg-[#FDE3E3]"] {
+  background-color: #2a1618 !important;
+}
+.facturo-dark [class*="bg-[#FFF0D6]"] {
+  background-color: #2a2110 !important;
+}
+.facturo-dark [class*="bg-[#DDF5E6]"] {
+  background-color: #10241a !important;
+}
+
+.facturo-dark [class*="border-[#E3E6EC]"],
+.facturo-dark [class*="border-[#ECEEF2]"],
+.facturo-dark [class*="border-[#F0F2F5]"],
+.facturo-dark [class*="border-[#E9ECEF]"] {
+  border-color: #25303e !important;
+}
+
+.facturo-dark [class*="text-[#14171F]"] {
+  color: #e9edf5 !important;
+}
+.facturo-dark [class*="text-[#3F4654]"] {
+  color: #c6cfdd !important;
+}
+.facturo-dark [class*="text-[#525866]"] {
+  color: #a9b4c5 !important;
+}
+.facturo-dark [class*="text-[#667085]"] {
+  color: #94a1b3 !important;
+}
+.facturo-dark [class*="text-[#98A2B3]"] {
+  color: #7e8a9c !important;
+}
+
+.facturo-dark input,
+.facturo-dark select,
+.facturo-dark textarea {
+  color: #e9edf5;
+  color-scheme: dark;
+}
+.facturo-dark ::-webkit-scrollbar-thumb {
+  background: #2b3745;
+}
+
+/* Keep A4 document previews print-accurate even in dark mode */
+.facturo-dark .paper-light,
+.facturo-dark .paper-light.bg-white {
+  background-color: #ffffff !important;
+  color: #14171f !important;
+}
+.facturo-dark .paper-light .bg-white {
+  background-color: #ffffff !important;
+}
+.facturo-dark .paper-light [class*="bg-[#F8F9FB]"] {
+  background-color: #f8f9fb !important;
+}
+.facturo-dark .paper-light [class*="bg-[#F3F4F6]"] {
+  background-color: #f3f4f6 !important;
+}
+.facturo-dark .paper-light [class*="border-[#E3E6EC]"],
+.facturo-dark .paper-light [class*="border-[#ECEEF2]"],
+.facturo-dark .paper-light [class*="border-[#F0F2F5]"] {
+  border-color: #e3e6ec !important;
+}
+.facturo-dark .paper-light [class*="text-[#14171F]"] {
+  color: #14171f !important;
+}
+.facturo-dark .paper-light [class*="text-[#3F4654]"] {
+  color: #3f4654 !important;
+}
+.facturo-dark .paper-light [class*="text-[#525866]"] {
+  color: #525866 !important;
+}
+.facturo-dark .paper-light [class*="text-[#667085]"] {
+  color: #667085 !important;
+}
+.facturo-dark .paper-light [class*="text-[#98A2B3]"] {
+  color: #98a2b3 !important;
+}
+.facturo-dark .paper-light [class*="text-[#0F3D3A]"] {
+  color: #0f3d3a !important;
+}

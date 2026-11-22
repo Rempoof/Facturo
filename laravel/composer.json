@@ -1,0 +1,62 @@
+{
+  "name": "facturo/app",
+  "type": "project",
+  "description": "Facturo — devis, factures et plafond Auto-Entrepreneur (Maroc), Laravel + Vue + Inertia.",
+  "license": "proprietary",
+  "require": {
+    "php": "^8.3",
+    "inertiajs/inertia-laravel": "^2.0",
+    "laravel/cashier": "^15.0",
+    "laravel/fortify": "^1.25",
+    "laravel/framework": "^12.0",
+    "laravel/horizon": "^5.30",
+    "laravel/reverb": "^1.4",
+    "laravel/tinker": "^2.10",
+    "mpdf/mpdf": "^8.2",
+    "spatie/laravel-permission": "^6.10",
+    "spatie/laravel-query-builder": "^6.2",
+    "spatie/laravel-sluggable": "^3.7"
+  },
+  "require-dev": {
+    "fakerphp/faker": "^1.24",
+    "laravel/pint": "^1.18",
+    "mockery/mockery": "^1.6",
+    "nunomaduro/collision": "^8.5",
+    "pestphp/pest": "^3.7",
+    "pestphp/pest-plugin-laravel": "^3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Database\\Factories\\": "database/factories/",
+      "Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": { "Tests\\": "tests/" }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover --ansi"
+    ],
+    "post-create-project-cmd": [
+      "@php artisan key:generate --ansi",
+      "@php artisan migrate --seed"
+    ],
+    "dev": [
+      "Composer\\Config::disableProcessTimeout",
+      "npx concurrently -c \"#93c5fd,#c4b5fd,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"npm run dev\" --names=server,queue,vite"
+    ],
+    "test": ["@php artisan config:clear --ansi", "@php artisan test"]
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "php-http/discovery": true
+    },
+    "sort-packages": true
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
